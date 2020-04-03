@@ -35,6 +35,10 @@ int main()
 
     cout<<typeid(tab2).name()<<endl;
 
-
 return 0;
 }
+/* function Array::Set() in DynArray.h converts data types
+in Array <float> tab2 it converts char value into ASCII representation
+in Array <char> tab1 it converts float value into random - PROBLEM
+
+solution: static_cast
