@@ -13,7 +13,7 @@ m_pData = new (nothrow) T[m_nSize];
 virtual ~Array()
 {
 if(m_pData != NULL)
-delete [] m_pData;      //CHANGED FROM: delete m_pData;
+delete m_pData;      //SHOULD CHANGE TO: delete [] m_pData;
 }
 bool Set(unsigned int nPos, const T& Value)
 {
