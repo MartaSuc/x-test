@@ -13,7 +13,7 @@ m_pData = new (nothrow) T[m_nSize];
 virtual ~Array()
 {
 if(m_pData != NULL)
-delete m_pData;
+delete [] m_pData;      //CHANGED FROM: delete m_pData;
 }
 bool Set(unsigned int nPos, const T& Value)
 {
@@ -31,5 +31,10 @@ if(nPos < m_nSize)
 return m_pData[nPos];
 else
 return T();
+}
+  //fun GetAdress to check allocated memory
+T* GetAdress(unsigned int nPos)
+{
+if(nPos < m_nSize)    return &m_pData[nPos];
 }
 };
